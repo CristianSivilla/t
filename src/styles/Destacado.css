@@ -1,0 +1,36 @@
+.destacado-elemento {
+    display: flex;
+    flex-direction: row;
+    position: relative; 
+    justify-content: center;
+    background-color: white;
+    height: 70%;
+    width: 100%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.destacado-img {
+    height: 40vh;
+    width: 40vh;
+    margin-top: 22%;
+    filter: brightness(65%);
+    transition: filter 0.5s ease-in;
+    position: relative; 
+}
+
+.destacado-img:hover {
+    filter: brightness(80%);
+    transition: all 0.5s ease-in;
+}
+
+
+
+.destacado-texto {
+    color: white;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-40%, -0%);
+    text-align: center;
+}

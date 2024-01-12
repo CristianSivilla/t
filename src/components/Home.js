@@ -1,6 +1,8 @@
 import React from 'react';
 import '../styles/Home.css';
 import Slider from '../components/Slider';
+import Destacado from '../components/Destacado';
+
 
 
 const Home = () => {
@@ -8,7 +10,24 @@ const Home = () => {
     <body>
     <div className="home-screen">
         <Slider/>
-        </div>
+    </div>
+    <div className="destacado-contenedor">
+      <p className="titulo-destacado">Colecciones</p>
+      <Destacado
+      imagen ="opalo"
+      nombre="Opalo"/>
+      <Destacado
+      imagen ="opalo"
+      nombre="Opalo"/>
+      <Destacado
+      imagen ="opalo"
+      nombre="Opalo"/>
+      <Destacado
+      imagen ="opalo"
+      nombre="Opalo"/>
+   
+           
+    </div>
         </body>
         
     );

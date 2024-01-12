@@ -1,13 +1,11 @@
 .destacado-elemento {
-    display: flex;
-    flex-direction: row;
     position: relative; 
-    justify-content: center;
     background-color: white;
     height: 70%;
     width: 100%;
     overflow: hidden;
-    margin-right: 10px;
+    margin: 0;
+   
 }
 
 .destacado-img {
@@ -31,6 +29,6 @@
     position: absolute;
     top: 35%;
     left: 50%;
-    transform: translate(-40%, -0%);
+    transform: translate(-30%, -0%);
     text-align: center;
 }

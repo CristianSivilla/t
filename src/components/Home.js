@@ -4,7 +4,6 @@ import Slider from '../components/Slider';
 import Destacado from '../components/Destacado';
 
 
-
 const Home = () => {
   return (
     <body>
@@ -17,18 +16,17 @@ const Home = () => {
       imagen ="opalo"
       nombre="Opalo"/>
       <Destacado
-      imagen ="opalo"
-      nombre="Opalo"/>
+      imagen ="amatista"
+      nombre="Amatista"/>
       <Destacado
       imagen ="opalo"
       nombre="Opalo"/>
-      <Destacado
+          <Destacado
       imagen ="opalo"
-      nombre="Opalo"/>
-   
-           
+      nombre="Opalo"/>  
     </div>
         </body>
+
         
     );
 

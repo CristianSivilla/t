@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Header.css';
 import logo from '../assets/icon_white.png';
 import lupa from '../assets/lupa.png';
@@ -11,15 +12,15 @@ const Header = () => {
   return (
     <header>
       <ul>
-        <li><a href="#Inicio"><img className="logo" src={logo} alt="icono" /></a></li>
-        <li><a href="#Tienda">Tienda</a></li>
-        <li><a href="#SobreNosotros">Sobre Nosotros</a></li>
-        <li><a href="#Contacto">Contacto</a></li>
-        <li><a href="#buscador"><img className="img" src={lupa} alt="buscador" /></a></li>
-        <li><a href="#carrito"><img className="img" src={carrito} alt="carrito" /></a></li>
-        <li><a href="#usuario"><img className="img" src={persona} alt="usuario" /></a></li>
-        <li><a href="#usuario"><img className="img" src={luna} alt="usuario" /></a></li>
-        <li><a href="#idioma"><img className="img" src={idioma} alt="idioma" /></a></li>
+        <li><Link to="/"><img className="logo" src={logo} alt="icono" /></Link></li>
+        <li><Link to="/Tienda">Tienda</Link></li>
+        <li><Link to="/SobreNosotros">Sobre Nosotros</Link></li>
+        <li><Link to="/Contacto">Contacto</Link></li>
+        <li><Link to="/buscador"><img className="img" src={lupa} alt="buscador" /></Link></li>
+        <li><Link to="/carrito"><img className="img" src={carrito} alt="carrito" /></Link></li>
+        <li><Link to="/usuario"><img className="img" src={persona} alt="usuario" /></Link></li>
+        <li><Link to="/usuario"><img className="img" src={luna} alt="usuario" /></Link></li>
+        <li><Link to="/idioma"><img className="img" src={idioma} alt="idioma" /></Link></li>
       </ul>
     </header>
   );

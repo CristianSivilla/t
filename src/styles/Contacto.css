@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(232, 255, 229); 
+    margin: 0;
+    padding: 0; 
+  }
+  
+  .contact-screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  

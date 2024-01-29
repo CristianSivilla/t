@@ -25,6 +25,21 @@ const Home = () => {
       imagen ="opalo"
       nombre="Opalo"/>  
     </div>
+
+    <div className="destacado-contenedor-inferior">
+      <Destacado
+      imagen ="opalo"
+      nombre="Opalo"/>
+      <Destacado
+      imagen ="amatista"
+      nombre="Amatista"/>
+      <Destacado
+      imagen ="opalo"
+      nombre="Opalo"/>
+          <Destacado
+      imagen ="opalo"
+      nombre="Opalo"/>  
+    </div>
         </body>
 
         

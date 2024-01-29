@@ -1,0 +1,49 @@
+.about-contenedor {
+    background-color: white;
+    border-radius: 5%;
+    height: 90vh;
+    width: 145vh;
+    margin: 4%;
+    position: relative; 
+}
+
+.about-text {
+    margin-bottom: 5vh; 
+    color: #248ebb;
+
+}
+
+.about-img {
+    height: 45%;
+    width: 23%;
+    border-radius: 5%;
+    margin-bottom: 6vh; 
+    margin-right: 10vh;
+
+}
+
+.carrerpi-img{
+    height: 45%;
+    width: 40%;
+    border-radius: 5%;
+    margin-bottom: 6vh; 
+}
+
+
+.texto-about{
+    color: black;
+    text-align: justify;
+    position: relative;
+    justify-content: center;
+    padding-left: 10vh;
+    padding-right: 10vh;
+}
+
+.texto-about2{
+    color: black;
+    text-align: justify;
+    position: relative;
+    justify-content: center;
+    padding-left: 10vh;
+    padding-right: 10vh; 
+}

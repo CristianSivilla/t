@@ -1,5 +1,33 @@
 footer{
-    background-color: rgb(21, 42, 28);
+    background-color: rgb(87, 127, 100);
     width: 100%;
     height: 70vh;
 }
+
+.img_icon {
+    width: 12%;
+    height: 25%;
+    justify-content: center;
+    transition: all 0.3s ease-in-out; 
+}
+
+.img_icon:hover {
+    width: 14%;
+    height: 27%;
+}
+
+.contenedor-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.texto-footer{
+    transition: all 0.3s ease-out; 
+}
+
+.texto-footer:hover{
+    color: white;
+    font-size: 105%;
+}
+

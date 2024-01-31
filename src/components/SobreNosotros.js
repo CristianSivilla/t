@@ -1,10 +1,10 @@
 import React from 'react';
 import '../styles/Contacto.css';
-import About from '../components/About';
-import Map from '../components/Map';
+import About from './About';
+import Map from './Map';
 
 
-const Contacto = () => {
+const SobreNosotros = () => {
   return (
     <div>
         <div className="contact-screen">
@@ -16,4 +16,4 @@ const Contacto = () => {
   );
 }
 
-export default Contacto;
+export default SobreNosotros;

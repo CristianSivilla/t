@@ -1,7 +1,7 @@
-.login-contenedor {
+.register-contenedor {
     background-color: white;
     border-radius: 5%;
-    height: 85vh;
+    height: 90vh;
     width: 145vh;
     margin: 2%;
     display: flex;
@@ -31,17 +31,17 @@
     padding-top: 3vh;
 }
 
-.login-button{
+.register-button{
     justify-content: center;
-    margin: 2%;
-  
+    margin: 1%;
+    margin-top: 2vh;
     width: 22vh;
     height: 6vh;
     border-radius: 5%;
     background-color: white;
 }
 
-.login-button:hover{
+.register-button:hover{
     background-color: #bbea9c;
     transition: all 0.5s ease-out;
 }

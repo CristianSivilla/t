@@ -4,7 +4,7 @@ import '../styles/CajaRegister.css'
 const CajaRegister = () => {
 
   return (
-    <div className="login-contenedor">
+    <div className="register-contenedor">
       <div className="login-text">
         <h2 className="login-text">Registro</h2>
       </div>
@@ -16,7 +16,7 @@ const CajaRegister = () => {
 
     
       <div className="contenedor-login-inferior">
-      <button className="login-button">Registrarse</button>
+      <button className="register-button">Registrarse</button>
       </div>
 
 

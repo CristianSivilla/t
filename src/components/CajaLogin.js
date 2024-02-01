@@ -35,7 +35,7 @@ const CajaLogin = () => {
       </div>
 
       <Link to={`/Tienda`}>
-        No tienes cuenta? <Link to="/Registro">Regístrate</Link>
+        <div className="registrarse-texto">No tienes cuenta? <Link to="/Registro">Regístrate</Link></div>
       </Link>
     </div>
   );

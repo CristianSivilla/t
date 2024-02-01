@@ -1,9 +1,18 @@
 import React from 'react';
+import '../styles/Login.css';
+import About from './CajaLogin';
+import CajaLogin from './CajaLogin';
 
-const Login = () => {
-    return(
-    <p>hola</p>
-    );
+
+const SobreNosotros = () => {
+  return (
+    <div>
+        <div className="contact-screen">
+        <CajaLogin/>
+        </div>
+      
+    </div>
+  );
 }
 
-export default Login;
+export default SobreNosotros;

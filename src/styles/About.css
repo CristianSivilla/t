@@ -47,3 +47,7 @@
     padding-left: 10vh;
     padding-right: 10vh; 
 }
+
+.recaptcha-container{
+    justify-content: center;
+}

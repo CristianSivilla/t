@@ -1,0 +1,74 @@
+.login-contenedor {
+    background-color: white;
+    border-radius: 5%;
+    height: 85vh;
+    width: 145vh;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    flex-direction: center;
+}
+
+.login-text {
+    margin-top: 4vh;
+    margin-bottom: 3vh; 
+    color: #248ebb;
+}
+
+
+.input{
+    margin: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 4vh;
+}
+
+
+.recaptcha-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 3vh;
+}
+
+.login-button{
+    justify-content: center;
+    margin: 2%;
+  
+    width: 22vh;
+    height: 6vh;
+    border-radius: 5%;
+    background-color: white;
+}
+
+.login-button:hover{
+    background-color: #bbea9c;
+    transition: all 0.5s ease-out;
+}
+
+.google-img {
+    width: 4%;
+    height: 45%;
+    border-radius: 30%; 
+    margin-top: 2%;
+
+}
+
+
+.contenedor-login-inferior{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 3vh;
+}
+
+.registrarse-texto{
+    color: rgb(155, 155, 155);
+    font-size:2vh;
+    animation: ease-in;
+}
+
+.registrarse-texto:hover{
+    font-size:2.5vh;
+    transition: all 0.5s ease-in;
+}

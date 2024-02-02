@@ -29,7 +29,12 @@ const Slider = () => {
       <img className="slider-img" src={slides[index].img} alt={slides[index].title} />
       <p id="texto-destacado">{slides[index].title}</p>
       <p className="texto-descriptivo">{slides[index].description}</p>
-      <button className="boton-slider">Ver en Tienda</button>
+      <button className="boton-slider">
+  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank" rel="noopener noreferrer">
+    Ver en Tienda
+  </a>
+</button>
+
     </div>
   );
 };

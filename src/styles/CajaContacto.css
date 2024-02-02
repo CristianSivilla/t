@@ -1,0 +1,95 @@
+.contacto-contenedor {
+    background-color: white;
+    border-radius: 5%;
+    height: 110vh;
+    width: 145vh;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    flex-direction: center;
+}
+
+.contacto-text {
+    margin-top: 4vh;
+    margin-bottom: 2vh; 
+    color: #248ebb;
+}
+
+.contacto-texto {
+    margin-top: 4vh;
+    margin-bottom: 3vh; 
+    color: #7c7f81;
+    font-size: 1.0em; 
+    font-weight: bold; 
+}
+
+.contacto-texto-telefono {
+    margin-top: 4vh;
+    margin-bottom: 3vh; 
+    color: #7c7f81;
+    font-size: 1.0em; 
+    font-weight: bold; 
+    margin-left: 68vh;
+}
+
+
+
+.contacto-fila1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.img_telefono{
+    margin-left: 2%;
+    width: 5vh;
+    height: 5vh;
+    padding-top: 2vh;
+    padding-right: 54vh;
+   float: left;
+}
+
+.contacto-fila2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.contacto-fila3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.img_mail{
+    margin-left: 2%;
+    width: 6vh;
+    height: 6vh;
+    padding-top: 2vh;
+}
+.img_ubi{
+    margin-left: 2%;
+    width: 7vh;
+    height: 8vh;
+}
+.tabla-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; 
+}
+
+.tabla-horarios {
+    border-collapse: collapse;
+}
+
+.tabla-horarios th, .tabla-horarios td {
+    border: 1px solid #ddd;
+    padding: 1.5vh;
+    text-align: center;
+}
+
+.tabla-horarios th {
+    background-color: #f2f2f2;
+}

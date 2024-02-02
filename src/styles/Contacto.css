@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(232, 255, 229); 
+    margin: 0;
+    padding: 0; 
+  }
+  
+  .contenedor-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  

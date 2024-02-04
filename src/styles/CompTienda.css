@@ -1,4 +1,4 @@
-.destacado-elemento {
+.comptienda-elemento {
     position: relative; 
     background-color: white;
     height: 100%;
@@ -8,7 +8,7 @@
    
 }
 
-.destacado-img {
+.comptienda-img {
     height: 40vh;
     width: 40vh;
     margin-top: 22%;
@@ -17,18 +17,18 @@
     position: relative; 
 }
 
-.destacado-img:hover {
+.comptienda-img:hover {
     filter: brightness(80%);
     transition: all 0.5s ease-in;
 }
 
 
 
-.destacado-texto {
+.comptienda-texto {
     color: white;
     position: absolute;
     top: 35%;
     left: 50%;
-    transform: translate(-50%, 0%);
+    transform: translate(-30%, -0%);
     text-align: center;
 }

@@ -14,31 +14,31 @@ const Home = () => {
       <p className="titulo-destacado">Colecciones</p>
       <Destacado
       imagen ="opalo"
-      nombre="Opalo"/>
+      nombre="Perlas"/>
       <Destacado
       imagen ="amatista"
-      nombre="Amatista"/>
+      nombre="Fornitura"/>
       <Destacado
       imagen ="opalo"
-      nombre="Opalo"/>
+      nombre="Piedra Sintética"/>
           <Destacado
       imagen ="opalo"
-      nombre="Opalo"/>  
+      nombre="Piedra Natural"/>  
     </div>
 
     <div className="destacado-contenedor-inferior">
       <Destacado
       imagen ="opalo"
-      nombre="Opalo"/>
+      nombre="Utensilios"/>
       <Destacado
       imagen ="amatista"
-      nombre="Amatista"/>
+      nombre="Estuches"/>
       <Destacado
       imagen ="opalo"
-      nombre="Opalo"/>
+      nombre="Cuero"/>
           <Destacado
       imagen ="opalo"
-      nombre="Opalo"/>  
+      nombre="Circonitas"/>  
     </div>
         </body>
 

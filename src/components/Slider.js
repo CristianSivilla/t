@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/Slider.css';
 import opalo from '../assets/opalo.jpg';
 import ametista from '../assets/amatista.jpg';
+import { Link } from 'react-router-dom';
 
 const Slider = () => {
   const [index, setIndex] = useState(0);
@@ -30,9 +31,10 @@ const Slider = () => {
       <p id="texto-destacado">{slides[index].title}</p>
       <p className="texto-descriptivo">{slides[index].description}</p>
       <button className="boton-slider">
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank" rel="noopener noreferrer">
-    Ver en Tienda
-  </a>
+      <Link to={`/Tienda`}>
+      Ver en Tienda
+      </Link>
+
 </button>
 
     </div>

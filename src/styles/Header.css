@@ -42,7 +42,16 @@ body {
     text-decoration: none;
     color: black;
   }
+
+  .modo-nocturno header {
+    background-color: rgb(196, 195, 195); 
+  }
+
+  .modo-nocturno  .texto-header {
+    color: white; 
+  }
   
+
   @media only screen and (max-width: 600px) {
     ul {
       flex-direction: column;

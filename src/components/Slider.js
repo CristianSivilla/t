@@ -1,10 +1,12 @@
+// components/Slider.js
+
 import React, { useState, useEffect } from 'react';
 import '../styles/Slider.css';
 import opalo from '../assets/opalo.jpg';
 import ametista from '../assets/amatista.jpg';
 import { Link } from 'react-router-dom';
 
-const Slider = () => {
+const Slider = ({ modoNocturno }) => {
   const [index, setIndex] = useState(0);
   const [transition, setTransition] = useState('fade-in');
 
@@ -20,23 +22,21 @@ const Slider = () => {
         setIndex((prevIndex) => (prevIndex + 1) % slides.length);
         setTransition('fade-in');
       }, 500);
-    }, 5000); 
+    }, 5000);
 
     return () => clearInterval(intervalId);
   }, [index, slides.length]);
 
   return (
-    <div className={`slider-contenedor ${transition}`}>
+    <div className={`slider-contenedor ${transition} ${modoNocturno ? 'modo-nocturno' : ''}`}>
       <img className="slider-img" src={slides[index].img} alt={slides[index].title} />
       <p id="texto-destacado">{slides[index].title}</p>
       <p className="texto-descriptivo">{slides[index].description}</p>
       <button className="boton-slider">
-      <Link to={`/Tienda`}>
-      Ver en Tienda
-      </Link>
-
-</button>
-
+        <Link to={`/Tienda`}>
+          Ver en Tienda
+        </Link>
+      </button>
     </div>
   );
 };

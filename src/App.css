@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.app-container {
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.modo-nocturno {
+  background-color: #1a1a1a;
+  color: #050505;
+}
+
+.modo-nocturno .home-screen {
+  background-color: #424141;
+}
+
+
+.modo-nocturno .home-screen {
+  transition: background-color 0.3s ease;
+}

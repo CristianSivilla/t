@@ -41,5 +41,7 @@ body {
   margin-top: 2%;
 }
 
-
+.modo-nocturno body {
+  background-color: rgb(196, 195, 195); 
+}
 

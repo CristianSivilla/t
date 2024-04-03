@@ -31,3 +31,6 @@ footer{
     font-size: 105%;
 }
 
+.modo-nocturno footer {
+    background-color: rgb(196, 195, 195); 
+  }

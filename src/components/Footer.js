@@ -7,9 +7,10 @@ import twitter from '../assets/twitter.png';
 import tiktok from '../assets/icon_green.png';
 
 
-const Footer = () => {
+const Footer = ({ toggleModoNocturno, modoNocturno }) => {
   return (
-    <footer>
+    <footer className={modoNocturno ? 'modo-nocturno' : ''}>
+
       <img className="img_icon" src={icon_green} alt="buscador" />
       <div className="contenedor-footer">
         <div className="contenedor-footer-izquierdo">

@@ -20,7 +20,6 @@ const App = () => {
     <Router>
       <div className={`app-container ${modoNocturno ? 'modo-nocturno' : ''}`}>
         <Header toggleModoNocturno={toggleModoNocturno} />
-
         <Switch>
           <Route path="/Registro" component={Registro} />
           <Route path="/Tienda" component={Tienda} />
@@ -30,8 +29,8 @@ const App = () => {
           <Route path="/Registro" component={Registro} />
           <Route path="/" component={Home} />
         </Switch>
+        <Footer toggleModoNocturno={toggleModoNocturno} />
 
-        <Footer />
       </div>
     </Router>
   );

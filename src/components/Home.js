@@ -4,9 +4,12 @@ import Slider from '../components/Slider';
 import Destacado from '../components/Destacado';
 
 
-const Home = () => {
+const Home = ({ modoNocturno }) => {
+
   return (
-    <body>
+    
+    <body className={modoNocturno ? 'modo-nocturno' : ''}>
+
     <div className="home-screen">
         <Slider/>
     </div>
@@ -42,7 +45,6 @@ const Home = () => {
     </div>
         </body>
 
-        
     );
 
 }

@@ -13,7 +13,7 @@ function Ofertas(props) {
           alt={props.nombre1}
         />
         <p className="ofertas-texto">{props.nombre1}</p>
-        <Link to="/Producto">
+        <Link to={{ pathname: "/Producto", state: { nombre: props.nombre1, imagen: props.imagen1 } }}>
           <button className="ofertas-button">Ver</button>
         </Link>
       </div>
@@ -24,7 +24,7 @@ function Ofertas(props) {
           alt={props.nombre2}
         />
         <p className="ofertas-texto">{props.nombre2}</p>
-        <Link to="/Producto">
+        <Link to={{ pathname: "/Producto", state: { nombre: props.nombre2, imagen: props.imagen2 } }}>
           <button className="ofertas-button">Ver</button>
         </Link>
       </div>
@@ -35,7 +35,7 @@ function Ofertas(props) {
           alt={props.nombre3}
         />
         <p className="ofertas-texto">{props.nombre3}</p>
-        <Link to="/Producto">
+        <Link to={{ pathname: "/Producto", state: { nombre: props.nombre3, imagen: props.imagen3 } }}>
           <button className="ofertas-button">Ver</button>
         </Link>
       </div>
@@ -46,7 +46,7 @@ function Ofertas(props) {
           alt={props.nombre4}
         />
         <p className="ofertas-texto">{props.nombre4}</p>
-        <Link to="/Producto">
+        <Link to={{ pathname: "/Producto", state: { nombre: props.nombre4, imagen: props.imagen4 } }}>
           <button className="ofertas-button">Ver</button>
         </Link>
       </div>

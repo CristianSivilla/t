@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Ofertas.css';
+import { Link } from 'react-router-dom';
 
 function Ofertas(props) {
 
@@ -12,7 +13,9 @@ function Ofertas(props) {
           alt={props.nombre1}
         />
         <p className="ofertas-texto">{props.nombre1}</p>
-        <button className="ofertas-button">Ver</button>
+        <Link to="/Producto">
+          <button className="ofertas-button">Ver</button>
+        </Link>
       </div>
       <div className="ofertas-imagen2">
         <img
@@ -21,7 +24,9 @@ function Ofertas(props) {
           alt={props.nombre2}
         />
         <p className="ofertas-texto">{props.nombre2}</p>
-        <button className="ofertas-button">Ver</button>
+        <Link to="/Producto">
+          <button className="ofertas-button">Ver</button>
+        </Link>
       </div>
       <div className="ofertas-imagen3">
         <img
@@ -30,7 +35,9 @@ function Ofertas(props) {
           alt={props.nombre3}
         />
         <p className="ofertas-texto">{props.nombre3}</p>
-        <button className="ofertas-button">Ver</button>
+        <Link to="/Producto">
+          <button className="ofertas-button">Ver</button>
+        </Link>
       </div>
       <div className="ofertas-imagen">
         <img
@@ -39,7 +46,9 @@ function Ofertas(props) {
           alt={props.nombre4}
         />
         <p className="ofertas-texto">{props.nombre4}</p>
-        <button className="ofertas-button">Ver</button>
+        <Link to="/Producto">
+          <button className="ofertas-button">Ver</button>
+        </Link>
       </div>
     </div>
   );

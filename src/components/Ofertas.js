@@ -1,9 +1,8 @@
 import React from 'react';
-import '../styles/Ofertas.css';
 import { Link } from 'react-router-dom';
+import '../styles/Ofertas.css'
 
 function Ofertas(props) {
-
   return (
     <div className="contenedor-ofertas">
       <div className="ofertas-imagen1">
@@ -13,7 +12,15 @@ function Ofertas(props) {
           alt={props.nombre1}
         />
         <p className="ofertas-texto">{props.nombre1}</p>
-        <Link to={{ pathname: "/Producto", state: { nombre: props.nombre1, imagen: props.imagen1 } }}>
+        <Link to={{
+            pathname: "/Producto",
+            state: {
+              nombre: props.nombre1,
+              imagen: props.imagen1,
+              descripcion: props.descripcion1,
+              precio: props.precio1
+            }
+          }}>
           <button className="ofertas-button">Ver</button>
         </Link>
       </div>
@@ -24,7 +31,15 @@ function Ofertas(props) {
           alt={props.nombre2}
         />
         <p className="ofertas-texto">{props.nombre2}</p>
-        <Link to={{ pathname: "/Producto", state: { nombre: props.nombre2, imagen: props.imagen2 } }}>
+        <Link to={{
+            pathname: "/Producto",
+            state: {
+              nombre: props.nombre2,
+              imagen: props.imagen2,
+              descripcion: props.descripcion2,
+              precio: props.precio2
+            }
+          }}>
           <button className="ofertas-button">Ver</button>
         </Link>
       </div>
@@ -35,18 +50,34 @@ function Ofertas(props) {
           alt={props.nombre3}
         />
         <p className="ofertas-texto">{props.nombre3}</p>
-        <Link to={{ pathname: "/Producto", state: { nombre: props.nombre3, imagen: props.imagen3 } }}>
+        <Link to={{
+            pathname: "/Producto",
+            state: {
+              nombre: props.nombre3,
+              imagen: props.imagen3,
+              descripcion: props.descripcion3,
+              precio: props.precio3
+            }
+          }}>
           <button className="ofertas-button">Ver</button>
         </Link>
       </div>
-      <div className="ofertas-imagen">
+      <div className="ofertas-imagen4">
         <img
           className="ofertas-img"
           src={require(`../assets/${props.imagen4}.jpg`)}
           alt={props.nombre4}
         />
         <p className="ofertas-texto">{props.nombre4}</p>
-        <Link to={{ pathname: "/Producto", state: { nombre: props.nombre4, imagen: props.imagen4 } }}>
+        <Link to={{
+            pathname: "/Producto",
+            state: {
+              nombre: props.nombre4,
+              imagen: props.imagen4,
+              descripcion: props.descripcion4,
+              precio: props.precio4
+            }
+          }}>
           <button className="ofertas-button">Ver</button>
         </Link>
       </div>

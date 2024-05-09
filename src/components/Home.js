@@ -8,7 +8,7 @@ const Home = ({ modoNocturno }) => {
 
   return (
     
-    <body className={modoNocturno ? 'modo-nocturno' : ''}>
+    <div className={modoNocturno ? 'modo-nocturno' : ''}>
 
     <div className="home-screen">
         <Slider/>
@@ -43,7 +43,7 @@ const Home = ({ modoNocturno }) => {
       imagen ="opalo"
       nombre="Circonitas"/>  
     </div>
-        </body>
+        </div>
 
     );
 

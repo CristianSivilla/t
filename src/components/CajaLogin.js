@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { useHistory } from 'react-router-dom'; // Importa useHistory
+import { useHistory } from 'react-router-dom'; 
 import ReCAPTCHA from "react-google-recaptcha";
 import '../styles/CajaLogin.css';
 import google from '../assets/google.png';
@@ -10,18 +10,18 @@ const CajaLogin = () => {
   const [correo, setCorreo] = useState('');
   const [contraseña, setContraseña] = useState('');
   const [mensaje, setMensaje] = useState('');
-  const [recaptchaCompleted, setRecaptchaCompleted] = useState(false); // Estado para controlar el estado del reCAPTCHA
-  const history = useHistory(); // Inicializa useHistory
-  const recaptchaRef = useRef(); // Referencia al componente ReCAPTCHA
+  const [recaptchaCompleted, setRecaptchaCompleted] = useState(false); 
+  const history = useHistory(); 
+  const recaptchaRef = useRef(); 
 
   const handleRecaptchaVerify = (token) => {
     console.log("reCAPTCHA token:", token);
-    setRecaptchaCompleted(true); // Marca el reCAPTCHA como completado cuando se verifica
+    setRecaptchaCompleted(true); 
   };
 
   const handleRecaptchaError = () => {
     console.error("Error en reCAPTCHA");
-    setRecaptchaCompleted(false); // Marca el reCAPTCHA como no completado en caso de error
+    setRecaptchaCompleted(false); 
   };
 
   const handleLogin = async () => {
@@ -38,10 +38,9 @@ const CajaLogin = () => {
 
       setMensaje(response.data.mensaje);
 
-      // Si el inicio de sesión es exitoso, redirige al usuario a la página de inicio
       if (response.data.mensaje === 'Inicio de sesión exitoso') {
         alert('¡Bienvenido!');
-        history.push('/'); // Redirige al usuario a la página de inicio
+        history.push('/'); 
       }
     } catch (error) {
       console.error('Error al iniciar sesión:', error);

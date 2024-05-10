@@ -13,16 +13,17 @@ function Producto() {
   }, []);
 
   const handleCarritoClick = async () => {
-    const productId = 3; 
-    const userId = 3; 
+    const productId = 1; 
+    const usuarioId = 3; 
 
     try {
-      const response = await axios.post('http://localhost:3001/api/agregar-al-carrito', {
+      const response = await axios.post('http://localhost:3001/api/agregar', {
+        usuarioId: usuarioId,  
         productoId: productId,
-        userId: userId
+        cantidad: 2
       });
 
-      console.log(response.data); // Mensaje del servidor
+      console.log(response.data); 
     } catch (error) {
       console.error('Error al agregar el producto al carrito:', error);
     }

@@ -8,7 +8,10 @@ import SobreNosotros from './components/SobreNosotros';
 import Registro from './components/Registro';
 import Contacto from './components/Contacto';
 import Login from './components/Login';
-import Producto from './components/Producto'
+import Producto from './components/Producto';
+import Cart from './components/Cart';
+
+
 import './App.css'; 
 const App = () => {
   const [modoNocturno, setModoNocturno] = useState(false);
@@ -22,6 +25,7 @@ const App = () => {
       <div className={`app-container ${modoNocturno ? 'modo-nocturno' : ''}`}>
         <Header toggleModoNocturno={toggleModoNocturno} />
         <Switch>
+        <Route path="/Cart" component={Cart} />
          <Route path="/Producto" component={Producto} />
           <Route path="/Registro" component={Registro} />
           <Route path="/Tienda" component={Tienda} />

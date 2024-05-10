@@ -19,7 +19,10 @@ const Header = ({ toggleModoNocturno, modoNocturno }) => {
         </li>
         <li><Link to="/Contacto">Contacto</Link></li>
         <li><img className="img" src={lupa} alt="buscador" /></li>
-        <li><img className="img" src={carrito} alt="carrito" /></li>
+        <Link to="/Cart">
+  <li><img className="img" src={carrito} alt="carrito" /></li>
+</Link>
+
         <li><Link to="/Login"><img className="img" src={persona} alt="usuario" /></Link></li>
         <li onClick={toggleModoNocturno} style={{ cursor: 'pointer' }}>
           <img className="img" src={luna} alt="modo nocturno" />

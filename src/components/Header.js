@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next'; 
 import '../styles/Header.css';
@@ -7,15 +7,19 @@ import lupa from '../assets/lupa.png';
 import carrito from '../assets/carrito.png';
 import persona from '../assets/persona.png';
 import luna from '../assets/luna.png';
-import idioma from '../assets/idioma_ca.png';
+import idiomacat from '../assets/idioma_ca.png';
+import idiomaes from '../assets/idioma_es.png';
 
 const Header = ({ toggleModoNocturno, modoNocturno }) => {
   const { t, i18n } = useTranslation();
+  const [mostrarBuscador, setMostrarBuscador] = useState(false); // Estado para controlar la visibilidad del buscador
 
   const cambiarIdioma = () => {
     const nuevoIdioma = i18n.language === 'es' ? 'ca' : 'es';
-    i18n.changeLanguage(nuevoIdioma); // asegúrate de que i18n esté disponible
+    i18n.changeLanguage(nuevoIdioma); 
   };
+
+  const idiomaImg = i18n.language === 'es' ? idiomaes : idiomacat;
 
   return (
     <header className={modoNocturno ? 'modo-nocturno' : ''}>
@@ -26,7 +30,21 @@ const Header = ({ toggleModoNocturno, modoNocturno }) => {
           <NavLink to="/SobreNosotros">{t('sobreNosotros')}</NavLink>
         </li>
         <li><NavLink to="/Contacto">{t('contacto')}</NavLink></li>
-        <li><img className="img" src={lupa} alt="buscador" /></li>
+        <li>
+          <img 
+            className="img" 
+            src={lupa} 
+            alt="buscador" 
+            onClick={() => setMostrarBuscador(!mostrarBuscador)}  en la lupa
+          />
+          {mostrarBuscador && ( 
+            <input 
+              type="text" 
+              className="campo-busqueda" 
+              placeholder={t('buscar')} 
+            />
+          )}
+        </li>
         <NavLink to="/Cart">
           <li><img className="img" src={carrito} alt="carrito" /></li>
         </NavLink>
@@ -35,7 +53,13 @@ const Header = ({ toggleModoNocturno, modoNocturno }) => {
           <img className="img" src={luna} alt="modo nocturno" />
         </li>
         <li className={modoNocturno ? 'modo-nocturno-texto' : ''}>
-          <img className="img" src={idioma} alt="idioma" onClick={cambiarIdioma} style={{ cursor: 'pointer' }} />
+          <img
+            className="img img-idioma"  
+            src={idiomaImg}
+            alt="idioma"
+            onClick={cambiarIdioma}
+            style={{ cursor: 'pointer' }}
+          />
         </li>
       </ul>
     </header>

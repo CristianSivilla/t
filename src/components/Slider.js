@@ -1,18 +1,19 @@
-// components/Slider.js
-
 import React, { useState, useEffect } from 'react';
 import '../styles/Slider.css';
 import opalo from '../assets/opalo.jpg';
 import ametista from '../assets/amatista.jpg';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 const Slider = ({ modoNocturno }) => {
+  const { t } = useTranslation();
+
   const [index, setIndex] = useState(0);
   const [transition, setTransition] = useState('fade-in');
 
   const slides = [
-    { img: opalo, title: 'Opalo', description: 'Es una gema preciosa conocida por su juego de colores iridiscentes. Este fenómeno se llama juego de colores, y es resultado de la interferencia de la luz en las microestructuras del ópalo. Puede mostrar una amplia gama de colores, desde el rojo y naranja hasta el verde y azul.' },
-    { img: ametista, title: 'Ametista', description: 'La amatista es una variedad del cuarzo conocida por su color púrpura. Se cree que tiene propiedades protectoras y puede promover la calma y la claridad mental.' },
+    { img: opalo, title: t('opalo'), description: t('opaloDescription') },
+    { img: ametista, title: t('ametista'), description: t('ametistaDescription') },
   ];
 
   useEffect(() => {
@@ -25,7 +26,7 @@ const Slider = ({ modoNocturno }) => {
     }, 5000);
 
     return () => clearInterval(intervalId);
-  }, [index, slides.length]);
+  }, [index, slides.length, setIndex, setTransition]);
 
   return (
     <div className={`slider-contenedor ${transition} ${modoNocturno ? 'modo-nocturno' : ''}`}>
@@ -34,7 +35,7 @@ const Slider = ({ modoNocturno }) => {
       <p className="texto-descriptivo">{slides[index].description}</p>
       <button className="boton-slider">
         <Link to={`/Tienda`}>
-          Ver en Tienda
+          {t('verEnTienda')}
         </Link>
       </button>
     </div>

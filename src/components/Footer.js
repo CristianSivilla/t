@@ -5,45 +5,46 @@ import facebook from '../assets/facebook.png';
 import instagram from '../assets/instagram.png';
 import twitter from '../assets/twitter.png';
 import tiktok from '../assets/icon_green.png';
-
+import { useTranslation } from 'react-i18next';
 
 const Footer = ({ toggleModoNocturno, modoNocturno }) => {
+  const { t } = useTranslation();
+
   return (
     <footer className={modoNocturno ? 'modo-nocturno' : ''}>
 
       <img className="img_icon" src={icon_green} alt="buscador" />
       <div className="contenedor-footer">
         <div className="contenedor-footer-izquierdo">
-          <h2>AYUDA</h2>
-          <p className="texto-footer">Contacto</p>
-          <p className="texto-footer">Preguntas Frecuentes</p>
-          <p className="texto-footer">Mis Compras</p>
+          <h2>{t('ayuda')}</h2>
+          <p className="texto-footer">{t('contacto')}</p>
+          <p className="texto-footer">{t('preguntasFrecuentes')}</p>
+          <p className="texto-footer">{t('misCompras')}</p>
         </div>
         <div className="contenedor-footer-central">
-          <h2>POLÍTICAS</h2>
-          <p className="texto-footer">Condiciones Generales</p>
-          <p className="texto-footer">Política de privacidad</p>
-          <p className="texto-footer">Cambios y devoluciones</p>
-          <p className="texto-footer">Política de Cookies</p>
+          <h2>{t('politicas')}</h2>
+          <p className="texto-footer">{t('condicionesGenerales')}</p>
+          <p className="texto-footer">{t('politicaPrivacidad')}</p>
+          <p className="texto-footer">{t('cambiosDevoluciones')}</p>
+          <p className="texto-footer">{t('politicaCookies')}</p>
         </div>
         <div className="contenedor-footer-central-2">
-          <h2>UBICACIÓN</h2>
-          <p className="texto-footer">Contacto</p>
-          <p className="texto-footer">Como Llegar</p>
-          <p className="texto-footer">Recogida en Tienda</p>
-          <p className="texto-footer">Entregas y Envíos</p>
+          <h2>{t('ubicacion')}</h2>
+          <p className="texto-footer">{t('contacto')}</p>
+          <p className="texto-footer">{t('comoLlegar')}</p>
+          <p className="texto-footer">{t('recogidaTienda')}</p>
+          <p className="texto-footer">{t('entregasEnvios')}</p>
         </div>
         <div className="contenedor-footer-derecho">
-          <h2>SIGUENOS EN REDES</h2>
-          <p className="texto-footer">Instagram</p>
-          <p className="texto-footer">Facebook</p>
-          <p className="texto-footer">Twitter</p>
-          <p className="texto-footer">TikTok</p>
+          <h2>{t('redesSociales')}</h2>
+          <p className="texto-footer">{t('instagram')}</p>
+          <p className="texto-footer">{t('facebook')}</p>
+          <p className="texto-footer">{t('twitter')}</p>
+          <p className="texto-footer">{t('tiktok')}</p>
         </div>
       </div>
     </footer>
   );
 };
-
 
 export default Footer;

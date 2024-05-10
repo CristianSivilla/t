@@ -10,7 +10,8 @@ import Contacto from './components/Contacto';
 import Login from './components/Login';
 import Producto from './components/Producto';
 import Cart from './components/Cart';
-
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n'; // asegúrate de importar la instancia de i18n
 
 import './App.css'; 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
 
   return (
     <Router>
+      <I18nextProvider i18n={i18n}>
       <div className={`app-container ${modoNocturno ? 'modo-nocturno' : ''}`}>
         <Header toggleModoNocturno={toggleModoNocturno} />
         <Switch>
@@ -37,6 +39,7 @@ const App = () => {
         <Footer toggleModoNocturno={toggleModoNocturno} />
 
       </div>
+      </I18nextProvider>
     </Router>
   );
 }

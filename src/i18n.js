@@ -30,7 +30,6 @@ i18n
           cuero: 'Cuero',
           circonitas: 'Circonitas',
           ayuda: 'Ayuda',
-          contacto: 'Contacto',
           preguntasFrecuentes: 'Preguntas Frecuentes',
           misCompras: 'Mis Compras',
           politicas: 'Políticas',
@@ -48,9 +47,21 @@ i18n
           twitter: 'Twitter',
           tiktok: 'TikTok',
           quienesSomos: 'Quiénes Somos',
-          ubicacion: 'Ubicación',
           texto1: 'Ubicada en el corazón del encantador Carrer del Pi número 11, Sivillà Lapidarios emerge como un rincón fascinante dedicado a la belleza y la sofisticación en forma de bisutería única. Este acogedor establecimiento combina a la perfección la artesanía tradicional con un toque contemporáneo, ofreciendo a sus clientes una experiencia de compra excepcional.',
-          texto2: 'Al adentrarse en Sivillà Lapidarios, los visitantes son recibidos por una exhibición resplandeciente de joyas cuidadosamente seleccionadas. Cada pieza es una obra maestra en sí misma, con detalles meticulosos que destacan la destreza artesanal de los expertos lapidarios detrás de la creación de estas joyas.'
+          texto2: 'Al adentrarse en Sivillà Lapidarios, los visitantes son recibidos por una exhibición resplandeciente de joyas cuidadosamente seleccionadas. Cada pieza es una obra maestra en sí misma, con detalles meticulosos que destacan la destreza artesanal de los expertos lapidarios detrás de la creación de estas joyas.',
+          dondeEncontrarnos: 'Dónde Encontrarnos',
+          dia: 'Día',
+          horario: 'Horario',
+          lunes: 'Lunes',
+          martes: 'Martes',
+          miercoles: 'Miércoles',
+          jueves: 'Jueves',
+          viernes: 'Viernes',
+          sabado: 'Sábado',
+          domingo: 'Domingo',
+          '8:30–13:00, 15:00–17:00': '8:30–13:00, 15:00–17:00',
+          '8:30–14:00': '8:30–14:00',
+          Cerrado: 'Cerrado'
         }
       },
       ca: {
@@ -74,7 +85,6 @@ i18n
           cuero: 'Cuir',
           circonitas: 'Circonites',
           ayuda: 'Ajuda',
-          contacto: 'Contacte',
           preguntasFrecuentes: 'Preguntes Freqüents',
           misCompras: 'Les Meves Compres',
           politicas: 'Polítiques',
@@ -92,9 +102,21 @@ i18n
           twitter: 'Twitter',
           tiktok: 'TikTok',
           quienesSomos: 'Qui Som',
-          ubicacion: 'Ubicació',
           texto1: 'Ubicada al cor del encantador Carrer del Pi número 11, Sivillà Lapidarios emergeix com un racó fascinant dedicat a la bellesa i la sofisticació en forma de bijuteria única. Aquest acollidor establiment combina a la perfecció l\'artesania tradicional amb un toc contemporani, oferint als seus clients una experiència de compra excepcional.',
-          texto2: 'En endinsar-se a Sivillà Lapidarios, els visitants són rebuts per una exhibició resplendent de joies cuidadosament seleccionades. Cada peça és una obra mestra en si mateixa, amb detalls meticulosos que destaquen la destresa artesanal dels experts lapidaris darrere de la creació d\'aquestes joies.'
+          texto2: 'En endinsar-se a Sivillà Lapidarios, els visitants són rebuts per una exhibició resplendent de joies cuidadosament seleccionades. Cada peça és una obra mestra en si mateixa, amb detalls meticulosos que destaquen la destresa artesanal dels experts lapidaris darrere de la creació d\'aquestes joies.',
+          dondeEncontrarnos: 'On Ens Trobem',
+          dia: 'Dia',
+          horario: 'Horari',
+          lunes: 'Dilluns',
+          martes: 'Dimarts',
+          miercoles: 'Dimecres',
+          jueves: 'Dijous',
+          viernes: 'Divendres',
+          sabado: ' Dissabte',
+          domingo: 'Diumenge',
+          '8:30–13:00, 15:00–17:00': '8:30–13:00, 15:00–17:00',
+          '8:30–14:00': '8:30–14:00',
+          Tancat: 'Tancat'
         }
       }
     },

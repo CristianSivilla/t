@@ -1,0 +1,40 @@
+.caja-carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagen-carrito {
+    width: 50%;
+    height: 50%;
+}
+
+.carrito-button,
+.boton-carritomodal {
+    width: 12vh;
+    height: 4vh;
+    border-radius: 5%;
+    background-color: white;
+    margin-top: 0px;
+}
+
+
+.boton-carritomodal {
+    width: 12vh;
+    height: 4vh;
+    border-radius: 5%;
+    background-color: white;
+    margin-top: 10vh; 
+}
+
+
+
+.carrito-button:hover {
+    background-color: #f65c32;
+    transition: all 0.5s ease-out;
+}
+
+.boton-carritomodal:hover {
+    background-color: #bdf78a;
+    transition: all 0.5s ease-out;
+}

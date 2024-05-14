@@ -65,7 +65,7 @@ const Cart = ({ userId, productId }) => {
                   <h3>{item.nombre}</h3>
                   <p>Precio: {item.precio}</p>
                   <p>Cantidad: {item.cantidad}</p>
-                  <button onClick={() => eliminarProducto(item.productoId)}>Eliminar</button>
+                  <button className="carrito-eliminar" onClick={() => eliminarProducto(item.productoId)}>Eliminar</button>
                 </div>
               </li>
             ))}

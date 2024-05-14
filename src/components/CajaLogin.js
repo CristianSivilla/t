@@ -1,11 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react'; // Agrega useEffect aquí
+import React, { useState, useRef, useEffect } from 'react'; 
 import { useHistory } from 'react-router-dom'; 
 import ReCAPTCHA from "react-google-recaptcha";
-import '../styles/CajaLogin.css';
 import google from '../assets/google.png';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode'; 
+import '../styles/CajaLogin.css';
 
 const CajaLogin = ({ setUsuarioId }) => {
   const [correo, setCorreo] = useState('');
@@ -43,9 +43,9 @@ const CajaLogin = ({ setUsuarioId }) => {
         const token = response.data.token;
         const usuarioId = jwtDecode(token).usuarioId; 
         setUsuarioId(usuarioId); 
-        localStorage.setItem('userId', usuarioId); // Almacenar userId en el almacenamiento local
+        localStorage.setItem('userId', usuarioId); 
         alert(`¡Bienvenido! Tu ID de usuario es ${usuarioId}`); 
-        history.push('/Cart', { userId: usuarioId }); // Redirigir al usuario a la página del carrito con el userId
+        history.push('/Cart', { userId: usuarioId }); 
       }
     } catch (error) {
       console.error('Error al iniciar sesión:', error);
@@ -53,7 +53,6 @@ const CajaLogin = ({ setUsuarioId }) => {
     }
   };
 
-  // Comprueba si hay un userId almacenado en el almacenamiento local al cargar el componente
   useEffect(() => {
     const userIdFromStorage = localStorage.getItem('userId');
     if (userIdFromStorage) {
@@ -64,9 +63,7 @@ const CajaLogin = ({ setUsuarioId }) => {
 
   return (
     <div className="login-contenedor">
-      <div className="login-text">
-        <h2 className="login-text">Iniciar Sesión</h2>
-      </div>
+      <h2 className="login-text">Iniciar Sesión</h2>
       <input className="input" type="text" value={correo} onChange={(e) => setCorreo(e.target.value)} placeholder="Ingresa tu correo" />
       <input className="input" type="password" value={contraseña} onChange={(e) => setContraseña(e.target.value)} placeholder="Ingresa tu contraseña" />
 

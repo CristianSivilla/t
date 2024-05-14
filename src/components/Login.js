@@ -4,7 +4,7 @@ import About from './CajaLogin';
 import CajaLogin from './CajaLogin';
 
 
-const SobreNosotros = () => {
+const Login = () => {
   return (
     <div>
         <div className="contact-screen">
@@ -15,4 +15,4 @@ const SobreNosotros = () => {
   );
 }
 
-export default SobreNosotros;
+export default Login;

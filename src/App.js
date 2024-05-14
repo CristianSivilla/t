@@ -9,6 +9,7 @@ import Registro from './components/Registro';
 import Contacto from './components/Contacto';
 import Producto from './components/Producto';
 import CajaLogin from './components/CajaLogin';
+import Login from './components/Login';
 import Cart from './components/Cart';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n'; 
@@ -16,7 +17,7 @@ import './App.css';
 
 const App = () => {
   const [modoNocturno, setModoNocturno] = useState(false);
-  const [usuarioId, setUsuarioId] = useState(null); // Agregamos estado para usuarioId
+  const [usuarioId, setUsuarioId] = useState(null); 
 
   const toggleModoNocturno = () => {
     setModoNocturno(!modoNocturno);

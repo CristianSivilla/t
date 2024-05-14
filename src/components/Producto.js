@@ -35,7 +35,7 @@ function Producto({ userId }) {
           <h4 className='precio-producto'>{precio}</h4>
           <button className='carrito-producto' onClick={() => handleCarritoClick(productoId)}>Añadir al Carrito</button>
           {agregadoAlCarrito && <p className="mensaje-carrito">Producto añadido correctamente al carrito</p>}
-          <button>pagar</button>
+          <button className='carrito-producto'>pagar</button>
         </div>
       </div>
     </div>

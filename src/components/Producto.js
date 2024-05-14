@@ -3,26 +3,18 @@ import { useLocation } from 'react-router-dom';
 import '../styles/Producto.css';
 import axios from 'axios';
 
-function Producto() {
+function Producto({ userId }) {
   const location = useLocation();
-  const { nombre, imagen, descripcion, precio, id } = location.state; // Asegúrate de que el ID del producto esté disponible
-  const [userId, setUserId] = useState(null);
+  const { nombre, imagen, descripcion, precio, producto_id } = location.state; 
   const [agregadoAlCarrito, setAgregadoAlCarrito] = useState(false); 
-  useEffect(() => {
-    setUserId(2);
-  }, []);
 
   const handleCarritoClick = async () => {
-    const productoId = 1; 
-    const usuarioId = 3; 
-
     try {
       const response = await axios.post('http://localhost:3001/api/agregar', {
-        usuarioId: usuarioId,  
-        productoId: productoId,
+        usuarioId: userId,  
+        productoId: producto_id,
         cantidad: 2
       });
-
       console.log(response.data); 
       setAgregadoAlCarrito(true); 
     } catch (error) {

@@ -4,62 +4,53 @@ import Modal from 'react-modal';
 import { useHistory } from 'react-router-dom'; 
 import '../styles/Cart.css';
 
-const Cart = () => {
-  const [cartItems, setCartItems] = useState([]);
+const Cart = ({ userId }) => {
+  const [cartData, setCartData] = useState([]); 
   const [modalIsOpen, setModalIsOpen] = useState(true); 
   const history = useHistory(); 
 
   useEffect(() => {
-    const fetchCartItems = async () => {
+    const fetchCartData = async () => {
       try {
-        const userId = 3; 
-        const response = await axios.get(`http://localhost:3001/api/${userId}`); 
-        setCartItems(response.data);
+        const response = await axios.get(`http://localhost:3001/api/${userId}`);
+        console.log('Response:', response.data);
+
+        if (Array.isArray(response.data) && response.data.length > 0) {
+          setCartData(response.data); 
+        } else {
+          console.log('El carrito está vacío o no se encontró');
+          setCartData([]); 
+        }
       } catch (error) {
-        console.error('Error al obtener los elementos del carrito:', error);
+        console.error('Error fetching cart data:', error);
       }
     };
-    fetchCartItems();
-  }, []);
+    fetchCartData();
+  }, [userId]);
 
-  const eliminarProducto = async (productoId) => {
-    try {
-      await axios.delete(`http://localhost:3001/api/carrito/${productoId}`);
-      const updatedCartItems = cartItems.filter(item => item.productoId !== productoId); // Corregir la comparación aquí
-      setCartItems(updatedCartItems);
-      alert('Producto eliminado correctamente del carrito');
-    } catch (error) {
-      console.error('Error al eliminar el producto del carrito:', error);
-    }
-  };
-
-  const closeModalAndRedirect = () => {
-    setModalIsOpen(false);
-    history.push('/'); 
+  const handleClick = () => {
+    console.log('User ID:', userId);
   };
 
   return (
-    <Modal
-      isOpen={modalIsOpen}
-      onRequestClose={closeModalAndRedirect}
-      ariaHideApp={false} 
-    >
+    <div onClick={handleClick}>
       <h2>Carrito</h2>
-      <ul>
-        {cartItems.map((item, index) => (
-          <li key={index}>
-            <div className='caja-carrito'>
-              <img className='imagen-carrito' src={require(`../assets/${item.nombre}.jpg`)} alt={item.nombre} />
-              <h3>{item.nombre}</h3>
-              <p>Precio: {item.precio}</p>
-              <p>Cantidad: {item.cantidad}</p>
-              <button className='carrito-button' onClick={() => eliminarProducto(item.productoId)}>Eliminar</button>
-            </div>
-          </li>
-        ))}
-      </ul>
-      <button className='boton-carritomodal' onClick={closeModalAndRedirect}>Cerrar</button>
-    </Modal>
+      {cartData.length > 0 ? (
+        <ul>
+          {cartData.map((item, index) => (
+            <li key={index}>
+              <div>
+                <h3>{item.nombre}</h3>
+                <p>Precio: {item.precio}</p>
+                <p>Cantidad: {item.cantidad}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>El carrito está vacío</p>
+      )}
+    </div>
   );
 };
 

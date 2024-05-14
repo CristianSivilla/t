@@ -18,7 +18,8 @@ function Ofertas(props) {
               nombre: props.nombre1,
               imagen: props.imagen1,
               descripcion: props.descripcion1,
-              precio: props.precio1
+              precio: props.precio1,
+              producto_id: props.producto_id1 
             }
           }}>
           <button className="ofertas-button">Ver</button>
@@ -37,7 +38,8 @@ function Ofertas(props) {
               nombre: props.nombre2,
               imagen: props.imagen2,
               descripcion: props.descripcion2,
-              precio: props.precio2
+              precio: props.precio2,
+              producto_id: props.producto_id2 
             }
           }}>
           <button className="ofertas-button">Ver</button>
@@ -56,7 +58,8 @@ function Ofertas(props) {
               nombre: props.nombre3,
               imagen: props.imagen3,
               descripcion: props.descripcion3,
-              precio: props.precio3
+              precio: props.precio3,
+              producto_id: props.producto_id3 
             }
           }}>
           <button className="ofertas-button">Ver</button>
@@ -75,7 +78,8 @@ function Ofertas(props) {
               nombre: props.nombre4,
               imagen: props.imagen4,
               descripcion: props.descripcion4,
-              precio: props.precio4
+              precio: props.precio4,
+              producto_id: props.producto_id4 
             }
           }}>
           <button className="ofertas-button">Ver</button>

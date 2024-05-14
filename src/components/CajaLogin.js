@@ -62,27 +62,29 @@ const CajaLogin = ({ setUsuarioId }) => {
   }, []);
 
   return (
-    <div className="login-contenedor">
-      <h2 className="login-text">Iniciar Sesión</h2>
-      <input className="input" type="text" value={correo} onChange={(e) => setCorreo(e.target.value)} placeholder="Ingresa tu correo" />
-      <input className="input" type="password" value={contraseña} onChange={(e) => setContraseña(e.target.value)} placeholder="Ingresa tu contraseña" />
+    <div className="caja-login-wrapper">
+      <div className="login-contenedor">
+        <h2 className="login-text">Iniciar Sesión</h2>
+        <input className="input" type="text" value={correo} onChange={(e) => setCorreo(e.target.value)} placeholder="Ingresa tu correo" />
+        <input className="input" type="password" value={contraseña} onChange={(e) => setContraseña(e.target.value)} placeholder="Ingresa tu contraseña" />
 
-      <div className="recaptcha-container">
-        <ReCAPTCHA
-          ref={recaptchaRef}
-          sitekey="6LfFhGMpAAAAABE9EJ4atUILMcdtdOuSURzsqmd0"
-          onChange={handleRecaptchaVerify}
-          onErrored={handleRecaptchaError}
-        />
+        <div className="recaptcha-container">
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            sitekey="6LfFhGMpAAAAABE9EJ4atUILMcdtdOuSURzsqmd0"
+            onChange={handleRecaptchaVerify}
+            onErrored={handleRecaptchaError}
+          />
+        </div>
+        <div className="contenedor-login-inferior">
+          <button className="login-button" onClick={handleLogin} disabled={!recaptchaCompleted}>Iniciar Sesión</button>
+          <img className="google-img" src={google} alt="google" />
+        </div>
+
+        <div className="registrarse-texto">No tienes cuenta? <Link to="/Registro">Regístrate</Link></div>
+
+        {mensaje && <p>{mensaje}</p>}
       </div>
-      <div className="contenedor-login-inferior">
-        <button className="login-button" onClick={handleLogin} disabled={!recaptchaCompleted}>Iniciar Sesión</button>
-        <img className="google-img" src={google} alt="google" />
-      </div>
-
-      <div className="registrarse-texto">No tienes cuenta? <Link to="/Registro">Regístrate</Link></div>
-
-      {mensaje && <p>{mensaje}</p>}
     </div>
   );
 }

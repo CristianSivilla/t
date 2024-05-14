@@ -15,15 +15,15 @@ const Home = ({ modoNocturno }) => {
       <div className="destacado-contenedor">
         <p className="titulo-destacado">{t('colecciones')}</p>
         <Destacado
-          imagen="opalo"
+          imagen="perla"
           nombre={t('perlas')}
         />
         <Destacado
-          imagen="amatista"
+          imagen="fornitura"
           nombre={t('fornitura')}
         />
         <Destacado
-          imagen="opalo"
+          imagen="sintetica"
           nombre={t('piedraSintetica')}
         />
         <Destacado
@@ -33,19 +33,19 @@ const Home = ({ modoNocturno }) => {
       </div>
       <div className="destacado-contenedor-inferior">
         <Destacado
-          imagen="opalo"
+          imagen="utensilios"
           nombre={t('utensilios')}
         />
         <Destacado
-          imagen="amatista"
+          imagen="estuche"
           nombre={t('estuches')}
         />
         <Destacado
-          imagen="opalo"
+          imagen="cuero"
           nombre={t('cuero')}
         />
         <Destacado
-          imagen="opalo"
+          imagen="circonitas"
           nombre={t('circonitas')}
         />
       </div>

@@ -72,12 +72,11 @@
     transition: all 0.5s ease-in;
 }
 .caja-login-wrapper{
-        background-color: rgb(191, 239, 185); 
+        background-color: rgb(232, 255, 229); 
         margin: 0;
         padding: 0; 
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: white; 
       }

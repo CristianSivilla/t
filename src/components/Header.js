@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { useTranslation } from 'react-i18next'; 
+import { NavLink, useHistory } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import '../styles/Header.css';
 import logo from '../assets/icon_white.png';
 import lupa from '../assets/lupa.png';
@@ -12,14 +12,21 @@ import idiomaes from '../assets/idioma_es.png';
 
 const Header = ({ toggleModoNocturno, modoNocturno }) => {
   const { t, i18n } = useTranslation();
-  const [mostrarBuscador, setMostrarBuscador] = useState(false); // Estado para controlar la visibilidad del buscador
+  const [mostrarBuscador, setMostrarBuscador] = useState(false);
+  const history = useHistory(); 
 
   const cambiarIdioma = () => {
     const nuevoIdioma = i18n.language === 'es' ? 'ca' : 'es';
-    i18n.changeLanguage(nuevoIdioma); 
+    i18n.changeLanguage(nuevoIdioma);
   };
 
   const idiomaImg = i18n.language === 'es' ? idiomaes : idiomacat;
+
+  const handleLogout = () => {
+    localStorage.removeItem('userId'); 
+    history.push('/login');
+    alert('Cerrar sesión');
+  };
 
   return (
     <header className={modoNocturno ? 'modo-nocturno' : ''}>
@@ -31,17 +38,17 @@ const Header = ({ toggleModoNocturno, modoNocturno }) => {
         </li>
         <li><NavLink to="/Contacto">{t('contacto')}</NavLink></li>
         <li>
-          <img 
-            className="img" 
-            src={lupa} 
-            alt="buscador" 
-            onClick={() => setMostrarBuscador(!mostrarBuscador)}  en la lupa
+          <img
+            className="img"
+            src={lupa}
+            alt="buscador"
+            onClick={() => setMostrarBuscador(!mostrarBuscador)}
           />
-          {mostrarBuscador && ( 
-            <input 
-              type="text" 
-              className="campo-busqueda" 
-              placeholder={t('buscar')} 
+          {mostrarBuscador && (
+            <input
+              type="text"
+              className="campo-busqueda"
+              placeholder={t('buscar')}
             />
           )}
         </li>
@@ -54,20 +61,19 @@ const Header = ({ toggleModoNocturno, modoNocturno }) => {
         </li>
         <li className={modoNocturno ? 'modo-nocturno-texto' : ''}>
           <img
-            className="img img-idioma"  
+            className="img img-idioma"
             src={idiomaImg}
             alt="idioma"
             onClick={cambiarIdioma}
             style={{ cursor: 'pointer' }}
           />
         </li>
-        
+        <li onClick={handleLogout} style={{ cursor: 'pointer' }}>
+          <span>Cerrar sesión</span>
+        </li>
       </ul>
     </header>
   );
-}
+};
 
 export default Header;
-
-
-

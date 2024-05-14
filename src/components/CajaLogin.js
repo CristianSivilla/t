@@ -61,6 +61,11 @@ const CajaLogin = ({ setUsuarioId }) => {
     }
   }, []);
 
+  const handleLogout = () => {
+    localStorage.removeItem('userId');
+    history.push('/Login');
+  };
+
   return (
     <div className="caja-login-wrapper">
       <div className="login-contenedor">

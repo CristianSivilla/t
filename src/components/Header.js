@@ -25,7 +25,7 @@ const Header = ({ toggleModoNocturno, modoNocturno }) => {
   const handleLogout = () => {
     localStorage.removeItem('userId'); 
     history.push('/login');
-    alert('Cerrar sesión');
+    alert('Hasta la Próxima');
   };
 
   return (

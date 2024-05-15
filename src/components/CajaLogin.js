@@ -1,28 +1,39 @@
-import React, { useState, useRef, useEffect } from 'react'; 
-import { useHistory } from 'react-router-dom'; 
+import React, { useState, useRef, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import ReCAPTCHA from "react-google-recaptcha";
 import google from '../assets/google.png';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { jwtDecode } from 'jwt-decode'; 
+import { jwtDecode } from 'jwt-decode';
 import '../styles/CajaLogin.css';
 
 const CajaLogin = ({ setUsuarioId }) => {
   const [correo, setCorreo] = useState('');
   const [contraseña, setContraseña] = useState('');
   const [mensaje, setMensaje] = useState('');
-  const [recaptchaCompleted, setRecaptchaCompleted] = useState(false); 
-  const history = useHistory(); 
-  const recaptchaRef = useRef(); 
+  const [recaptchaCompleted, setRecaptchaCompleted] = useState(false);
+  const [insulto, setInsulto] = useState('');
+  const history = useHistory();
+  const recaptchaRef = useRef();
+
+  const obtenerInsulto = async () => {
+    try {
+      const response = await axios.get('https://api.chucknorris.io/jokes/random');
+      setInsulto(response.data.value);
+      alert(`${response.data.value}`);
+    } catch (error) {
+      console.error('Error al obtener insulto:', error);
+    }
+  };
 
   const handleRecaptchaVerify = (token) => {
     console.log("reCAPTCHA token:", token);
-    setRecaptchaCompleted(true); 
+    setRecaptchaCompleted(true);
   };
 
   const handleRecaptchaError = () => {
     console.error("Error en reCAPTCHA");
-    setRecaptchaCompleted(false); 
+    setRecaptchaCompleted(false);
   };
 
   const handleLogin = async () => {
@@ -41,11 +52,11 @@ const CajaLogin = ({ setUsuarioId }) => {
 
       if (response.data.mensaje === 'Inicio de sesión exitoso') {
         const token = response.data.token;
-        const usuarioId = jwtDecode(token).usuarioId; 
-        setUsuarioId(usuarioId); 
-        localStorage.setItem('userId', usuarioId); 
-        alert(`¡Bienvenido! Tu ID de usuario es ${usuarioId}`); 
-        history.push('/Cart', { userId: usuarioId }); 
+        const usuarioId = jwtDecode(token).usuarioId;
+        setUsuarioId(usuarioId);
+        localStorage.setItem('userId', usuarioId);
+        obtenerInsulto(); 
+        history.push('/Cart', { userId: usuarioId });
       }
     } catch (error) {
       console.error('Error al iniciar sesión:', error);
@@ -89,6 +100,7 @@ const CajaLogin = ({ setUsuarioId }) => {
         <div className="registrarse-texto">No tienes cuenta? <Link to="/Registro">Regístrate</Link></div>
 
         {mensaje && <p>{mensaje}</p>}
+        {insulto && <p>{insulto}</p>}
       </div>
     </div>
   );

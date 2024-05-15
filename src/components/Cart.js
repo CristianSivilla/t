@@ -13,7 +13,7 @@ const Cart = ({ userId, productId }) => {
   useEffect(() => {
     const fetchCartData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/api/${userId}`);
+        const response = await axios.get(`https://tb-yhp0.onrender.com/api/${userId}`);
         console.log('Response:', response.data);
 
         if (Array.isArray(response.data) && response.data.length > 0) {
@@ -37,7 +37,7 @@ const Cart = ({ userId, productId }) => {
 
   const eliminarProducto = async (productoId) => {
     try {
-      await axios.delete(`http://localhost:3001/api/carrito/${productoId}`);
+      await axios.delete(`https://tb-yhp0.onrender.com/api/carrito/${productoId}`);
       const updatedCartData = cartData.filter(item => item.productoId !== productoId);
       setCartData(updatedCartData);
       calculateTotalPrice(updatedCartData); 

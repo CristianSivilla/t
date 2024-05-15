@@ -16,7 +16,7 @@ function Producto({ userId }) {
 
   const handleCarritoClick = async (productoId) => {
     try {
-      const response = await axios.post('http://localhost:3001/api/agregar', {
+      const response = await axios.post('https://tb-yhp0.onrender.com/api/agregar', {
         usuarioId: userId,
         productoId: productoId, 
         cantidad: cantidad

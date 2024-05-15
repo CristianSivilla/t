@@ -25,7 +25,7 @@ const CajaRegistro = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:3001/api/registro', {
+      const response = await axios.post('https://tb-yhp0.onrender.com/api/registro', {
         nombre,
         apellido,
         correo,

@@ -19,6 +19,7 @@
 }
 
 
+.carrito-comprar,
 .boton-carritomodal,
 .modal-close-button {
     width: 12vh;
@@ -28,13 +29,14 @@
     margin-top: 10vh; 
 }
 
+
 .carrito-button:hover,
 .modal-close-button:hover{
     background-color: #f65c32;
     transition: all 0.5s ease-out;
 }
-
-.boton-carritomodal:hover {
+.boton-modal:hover,
+.carrito-comprar:hover {
     background-color: #bdf78a;
     transition: all 0.5s ease-out;
 }
@@ -50,7 +52,7 @@
 }
 
 
-.carrito-eliminar:hover{
-    background-color: #f58f60;
-    transition: all 0.5s ease-out;
+
+.total-carrito{
+    margin-top: 5vh;
 }

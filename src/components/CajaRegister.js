@@ -11,7 +11,7 @@ const CajaRegistro = () => {
   const [contraseña, setContraseña] = useState('');
   const [confirmarContraseña, setConfirmarContraseña] = useState('');
   const [mensaje, setMensaje] = useState('');
-  const [error, setError] = useState(null); // Estado para controlar errores
+  const [error, setError] = useState(null); 
 
   const handleRegistro = async () => {
     if (!correoIsValid(correo)) {
@@ -35,12 +35,11 @@ const CajaRegistro = () => {
       setMensaje(response.data.mensaje);
     } catch (error) {
       console.error('Error al registrar usuario:', error);
-      setError('Error al registrar usuario. Por favor, inténtalo de nuevo más tarde.'); // Configurar el error obtenido del servidor
+      setError('Error al registrar usuario. Por favor, inténtalo de nuevo más tarde.'); 
     }
   };
 
   const correoIsValid = (email) => {
-    // Expresión regular para validar el formato de correo electrónico
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };

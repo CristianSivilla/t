@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Ofertas.css'
+import { useTranslation } from 'react-i18next';
 
 function Ofertas(props) {
+  const { t } = useTranslation();
   return (
     <div className="contenedor-ofertas">
       <div className="ofertas-imagen1">
@@ -22,7 +24,8 @@ function Ofertas(props) {
               producto_id: props.producto_id1 
             }
           }}>
-          <button className="ofertas-button">Ver</button>
+        <button className="ofertas-button">{t('verEnTienda')}</button>
+
         </Link>
       </div>
       <div className="ofertas-imagen2">
@@ -42,7 +45,8 @@ function Ofertas(props) {
               producto_id: props.producto_id2 
             }
           }}>
-          <button className="ofertas-button">Ver</button>
+          <button className="ofertas-button">{t('verEnTienda')}</button>
+
         </Link>
       </div>
       <div className="ofertas-imagen3">
@@ -62,7 +66,8 @@ function Ofertas(props) {
               producto_id: props.producto_id3 
             }
           }}>
-          <button className="ofertas-button">Ver</button>
+        <button className="ofertas-button">{t('verEnTienda')}</button>
+
         </Link>
       </div>
       <div className="ofertas-imagen4">
@@ -82,7 +87,7 @@ function Ofertas(props) {
               producto_id: props.producto_id4 
             }
           }}>
-          <button className="ofertas-button">Ver</button>
+         <button className="ofertas-button">{t('verEnTienda')}</button>
         </Link>
       </div>
     </div>

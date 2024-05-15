@@ -12,7 +12,7 @@ const Slider = ({ modoNocturno }) => {
   const [transition, setTransition] = useState('fade-in');
 
   const slides = [
-    { img: opalo, title: t('opalo'), description: t('opaloDescription') },
+    { img: opalo, title: t('opalo'), description: t('opaloDescriptions') },
     { img: ametista, title: t('ametista'), description: t('ametistaDescription') },
   ];
 

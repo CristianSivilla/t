@@ -69,7 +69,7 @@ const Header = ({ toggleModoNocturno, modoNocturno }) => {
           />
         </li>
         <li onClick={handleLogout} style={{ cursor: 'pointer' }}>
-          <span>Cerrar sesión</span>
+           <span>{t('cerrarSesion')}</span>
         </li>
       </ul>
     </header>

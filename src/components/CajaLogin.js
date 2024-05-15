@@ -87,7 +87,7 @@ const CajaLogin = ({ setUsuarioId }) => {
         <div className="recaptcha-container">
           <ReCAPTCHA
             ref={recaptchaRef}
-            sitekey="6LfFhGMpAAAAABE9EJ4atUILMcdtdOuSURzsqmd0"
+            sitekey="AIzaSyB_TmItOXw9ZV6gR5-V35gK65wfPsNYhiM"
             onChange={handleRecaptchaVerify}
             onErrored={handleRecaptchaError}
           />

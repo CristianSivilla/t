@@ -79,29 +79,7 @@ const Tienda = () => {
                 precio4="2€"
             />
 
-            <Ofertas
-                producto_id1="3"
-                imagen1="sintetica"
-                nombre1={t('piedraSintetica')}
-                descripcion1={t('piedraSinteticaDescription')}
-                precio1="1€"
-                producto_id2="3"
-                imagen2="sintetica"
-                nombre2={t('piedraSintetica')}
-                descripcion2={t('piedraSinteticaDescription')}
-                precio2="1€"
-                producto_id3="3"
-                imagen3="sintetica"
-                nombre3={t('piedraSintetica')}
-                descripcion3={t('piedraSinteticaDescription')}
-                precio3="1€"
-                producto_id4="3"
-                imagen4="sintetica"
-                nombre4={t('piedraSintetica')}
-                descripcion4={t('piedraSinteticaDescription')}
-                precio4="1€"
-            />
-
+          
             <Ofertas
                 producto_id1="5"
                 imagen1="utensilios"

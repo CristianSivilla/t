@@ -39,10 +39,6 @@ const Cart = ({ userId, productId }) => {
     }
   };
 
-  const handleClick = () => {
-    console.log('User ID:', userId);
-  };
-
   const closeModalAndRedirect = () => {
     setModalIsOpen(false);
     history.push('/'); 

@@ -98,7 +98,10 @@ i18n
           confirmaContraseña: "Confirma la contraseña",
           contraseñasNoCoinciden: "Las contraseñas no coinciden",
           errorRegistro: "Error al registrar usuario. Por favor, inténtalo de nuevo más tarde.",
-          registroExitoso: "¡Registro exitoso! Por favor, inicia sesión."
+          registroExitoso: "¡Registro exitoso! Por favor, inicia sesión.",
+          addToCart: "Añadir al Carrito",
+          productAddedToCart: "Producto añadido correctamente al carrito",
+          pay: "Pagar"
 
           
         }
@@ -192,8 +195,12 @@ i18n
           confirmaContraseña: "Confirmeu la contrasenya",
           contraseñasNoCoinciden: "Les contrasenyes no coincideixen",
           errorRegistro: "Error en registrar l'usuari. Si us plau, torneu-ho a provar més tard.",
-          registroExitoso: "Registre amb èxit! Si us plau, inicieu sessió."
+          registroExitoso: "Registre amb èxit! Si us plau, inicieu sessió.",
+          addToCart: "Afegir al Cistell",
+          productAddedToCart: "Producte afegit correctament al cistell",
+          pay: "Pagar"
           
+                  
         
         }
       }
